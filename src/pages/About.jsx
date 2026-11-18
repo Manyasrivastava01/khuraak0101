@@ -75,6 +75,8 @@ export default function About() {
                 <img
                   src={photos.interior1 || "/interior-1.jpg"}
                   alt="Khuraak Restaurant"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 text-white text-center">

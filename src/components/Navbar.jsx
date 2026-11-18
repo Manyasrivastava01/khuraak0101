@@ -5,12 +5,11 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { useSitePhotos } from '../utils/photoStorage'
 
 const NAV_LINKS = [
-  { to: '/',            label: 'Home' },
-  { to: '/menu',        label: 'Menu' },
-  { to: '/reservations',label: 'Reserve' },
-  { to: '/events',      label: 'Events' },
-  { to: '/about',       label: 'About' },
-  { to: '/contact',     label: 'Contact' },
+  { to: '/',        label: 'Home' },
+  { to: '/menu',    label: 'Menu' },
+  { to: '/events',  label: 'Events' },
+  { to: '/about',   label: 'About' },
+  { to: '/contact', label: 'Contact' },
 ]
 
 export default function Navbar() {

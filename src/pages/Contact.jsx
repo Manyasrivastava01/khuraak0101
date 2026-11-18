@@ -5,8 +5,12 @@ const HOURS = [
   { day: 'Monday – Sunday', time: '11:00 AM – 11:30 PM' },
 ]
 
+// Real Google Maps short link provided by restaurant owner
+const MAPS_LINK = 'https://maps.app.goo.gl/koJn5DA37cSHefUF9'
+// Gmail compose link so it opens Gmail instead of Outlook
+const GMAIL_LINK = 'https://mail.google.com/mail/?view=cm&to=Khuraaketawah@gmail.com'
+
 export default function Contact() {
-  const addressQuery = encodeURIComponent('Near, bharthana chauraha, Ashok Nagar, Yashoda Nagar, Etawah, Uttar Pradesh 206001')
 
   return (
     <>
@@ -62,7 +66,9 @@ export default function Contact() {
                     </div>
                   </a>
 
-                  <a href="mailto:Khuraaketawah@gmail.com"
+                  <a href={GMAIL_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-4 group">
                     <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
                       <FaEnvelope size={14} className="text-primary group-hover:text-white transition-colors" />
@@ -103,7 +109,7 @@ export default function Contact() {
                       <p className="text-xs text-gray-400 font-sans">Address</p>
                       <p className="font-sans font-medium text-charcoal">Khuraak Multi Cuisine Restaurant</p>
                       <p className="text-sm text-gray-500 font-sans leading-relaxed mt-0.5">
-                        Near, bharthana chauraha, Ashok Nagar, Yashoda Nagar, Etawah, Uttar Pradesh 206001
+                        Near, bharthana chauraha, Ashok Nagar, Etawah, Uttar Pradesh 206001
                       </p>
                     </div>
                   </div>
@@ -139,12 +145,12 @@ export default function Contact() {
               </a>
             </div>
 
-            {/* Right — Map */}
+            {/* Right — Map only */}
             <div className="bg-white rounded-2xl p-6 border border-border shadow-sm flex flex-col gap-4">
               <h2 className="font-serif text-xl font-bold text-charcoal">Find Us on Map</h2>
               <div className="rounded-xl overflow-hidden border border-border" style={{ minHeight: '340px', height: '360px' }}>
                 <iframe
-                  src="https://maps.google.com/maps?q=Near,+bharthana+chauraha,+Ashok+Nagar,+Yashoda+Nagar,+Etawah,+Uttar+Pradesh+206001&output=embed&z=16"
+                  src="https://maps.google.com/maps?q=Khuraak+Multi+Cuisine+Restaurant,+Ashok+Nagar,+Etawah,+UP+206001&output=embed&z=16"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -155,7 +161,7 @@ export default function Contact() {
                 />
               </div>
               <a
-                href="https://maps.app.goo.gl/pgfDJ3Cu5EoyTMLx5"
+                href={MAPS_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline flex items-center justify-center gap-2 w-full py-3 text-center"

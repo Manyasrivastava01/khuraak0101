@@ -1,5 +1,13 @@
 import { useState, useEffect } from 'react'
-import { supabase } from '../lib/supabase'
+
+// Lazy-load Supabase only when actually needed (keeps it out of the initial bundle)
+let _supabase = null
+async function getSupabase() {
+  if (_supabase) return _supabase
+  const { supabase } = await import('../lib/supabase')
+  _supabase = supabase
+  return _supabase
+}
 
 export function useAuth() {
   const [user, setUser] = useState(() => {
@@ -20,21 +28,17 @@ export function useAuth() {
     // Check Supabase session if configured with real keys
     const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
     if (supabaseUrl && !supabaseUrl.includes('placeholder')) {
-      supabase.auth.getSession().then(({ data }) => {
-        if (data?.session?.user) {
-          setUser(data.session.user)
-        }
-      }).catch(() => {})
+      getSupabase().then(sb => {
+        sb.auth.getSession().then(({ data }) => {
+          if (data?.session?.user) setUser(data.session.user)
+        }).catch(() => {})
 
-      const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-        if (session?.user) {
-          setUser(session.user)
-        }
+        const { data: listener } = sb.auth.onAuthStateChange((_event, session) => {
+          if (session?.user) setUser(session.user)
+        })
+
+        return () => listener?.subscription?.unsubscribe?.()
       })
-
-      return () => {
-        listener?.subscription?.unsubscribe?.()
-      }
     }
   }, [])
 
@@ -54,7 +58,8 @@ export function useAuth() {
 
     // 2. Supabase auth fallback
     try {
-      const res = await supabase.auth.signInWithPassword({ email, password })
+      const sb = await getSupabase()
+      const res = await sb.auth.signInWithPassword({ email, password })
       if (!res.error && res.data?.user) {
         localStorage.setItem('khuraak_admin_auth', JSON.stringify(res.data.user))
         setUser(res.data.user)
@@ -69,7 +74,8 @@ export function useAuth() {
     localStorage.removeItem('khuraak_admin_auth')
     setUser(null)
     try {
-      await supabase.auth.signOut()
+      const sb = await getSupabase()
+      await sb.auth.signOut()
     } catch (e) {}
   }
 

@@ -2,16 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/khuraak-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#D7141A" />
     <title>Khuraak Multi Cuisine Restaurant</title>
     <meta name="description" content="Khuraak Multi Cuisine Restaurant — Fine dining with authentic multi-cuisine flavours. Reserve a table, explore the menu, and plan your event." />
 
-    <!-- Google Fonts -->
+    <!-- Preload critical logo so it shows instantly -->
+    <link rel="preload" href="/khuraak-logo.png" as="image" />
+
+    <!-- Google Fonts — only load weights actually used -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&display=swap&font-display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&display=swap&font-display=swap" rel="stylesheet" />
 
     <!-- JSON-LD Restaurant Schema -->
     <script type="application/ld+json">
@@ -19,11 +23,20 @@
       "@context": "https://schema.org",
       "@type": "Restaurant",
       "name": "Khuraak Multi Cuisine Restaurant",
-      "description": "Fine dining multi-cuisine restaurant",
-      "servesCuisine": ["Indian", "Multi-Cuisine"],
+      "description": "Pure vegetarian fine dining multi-cuisine restaurant in Etawah",
+      "servesCuisine": ["Indian", "Chinese", "Italian", "Mexican", "Multi-Cuisine"],
       "priceRange": "$$",
-      "hasMap": "https://maps.google.com",
-      "openingHours": "Tu-Su 11:00-23:30"
+      "telephone": "+919105104000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Near Bharthana Chauraha, Ashok Nagar, Yashoda Nagar",
+        "addressLocality": "Etawah",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "206001",
+        "addressCountry": "IN"
+      },
+      "url": "https://khuraak.in",
+      "openingHours": "Mo-Su 11:00-23:30"
     }
     </script>
   </head>

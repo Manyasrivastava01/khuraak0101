@@ -12,7 +12,7 @@ import {
   FaLeaf,
 } from 'react-icons/fa'
 import { MdRestaurant, MdMenuBook, MdCelebration } from 'react-icons/md'
-import { FEATURED_DISHES, REVIEWS } from '../data/menuData'
+import { FEATURED_DISHES, REVIEWS } from '../data/homeData'
 import { useSitePhotos } from '../utils/photoStorage'
 
 /* ─── Rating Component ─────────────────────────── */
@@ -148,7 +148,7 @@ export default function Home() {
         />
       </Helmet>
 
-      {/* ── 5-Star Formal Hero Section ── */}
+      {/* ── Hero Section ── */}
       <section
         id="hero"
         className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-28 pb-20"
@@ -156,20 +156,9 @@ export default function Home() {
           background: 'radial-gradient(ellipse at top, #26090c 0%, #170709 45%, #0d0405 100%)',
         }}
       >
-        {/* Subtle royal pattern */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, #D7141A 1.2px, transparent 0)`,
-            backgroundSize: '48px 48px',
-          }}
-        />
-
-        {/* Ambient atmospheric glows */}
+        {/* Single soft red radial glow — no dot pattern */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-primary/20 rounded-full blur-[140px]" />
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px]" />
-          <div className="absolute top-1/3 right-10 w-80 h-80 bg-red-600/10 rounded-full blur-[100px]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/25 rounded-full blur-[160px]" />
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto animate-fade-in">
@@ -179,6 +168,8 @@ export default function Home() {
               src={photos.heroLogo || "/khuraak-logo.png"}
               alt="Khuraak Multi Cuisine Restaurant"
               className="h-20 sm:h-24 md:h-28 w-auto mx-auto object-contain drop-shadow-[0_12px_32px_rgba(215,20,26,0.4)]"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
 
@@ -186,16 +177,16 @@ export default function Home() {
           <div className="flex items-center justify-center gap-3 mb-5">
             <span className="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-amber-400" />
             <span className="text-amber-300/90 font-sans text-xs font-semibold tracking-[0.3em] uppercase">
-              Pure Vegetarian Fine Dining • Etawah
+              Multi Cuisine Restaurant • Etawah
             </span>
             <span className="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-amber-400" />
           </div>
 
-          {/* Majestic 5-Star Headline */}
+          {/* Headline */}
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-5 leading-[1.14] tracking-tight">
-            The Art of Fine <br />
+            Where Every Meal Becomes <br />
             <span className="bg-gradient-to-r from-red-400 via-rose-200 to-amber-200 bg-clip-text text-transparent italic">
-              Vegetarian Dining
+              a Celebration
             </span>
           </h1>
 
@@ -209,7 +200,7 @@ export default function Home() {
             With 120 luxurious seats and handcrafted culinary recipes, we transform every meal into a celebration.
           </p>
 
-          {/* Luxury Action Buttons */}
+          {/* CTA Buttons — Reserve + Explore Menu only */}
           <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 justify-center items-center mb-10 sm:mb-12 w-full max-w-md sm:max-w-none mx-auto">
             <Link
               to="/reservations"
@@ -224,13 +215,6 @@ export default function Home() {
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 sm:px-9 py-3.5 sm:py-4 rounded-full border border-white/30 text-white font-sans font-semibold text-sm sm:text-base bg-white/5 hover:bg-white hover:text-charcoal transition-all duration-200 backdrop-blur-sm"
             >
               <MdMenuBook size={18} /> Explore Menu
-            </Link>
-            <Link
-              to="/events"
-              id="hero-events-btn"
-              className="inline-flex items-center justify-center gap-1.5 text-amber-300 hover:text-white font-sans text-sm font-medium transition-colors py-2"
-            >
-              <MdCelebration size={17} /> Private Events <FaArrowRight size={11} />
             </Link>
           </div>
 
@@ -303,6 +287,8 @@ export default function Home() {
                 <img
                   src={photos.interior1 || "/interior-1.jpg"}
                   alt="Khuraak Grand Dining Hall"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -319,6 +305,8 @@ export default function Home() {
                 <img
                   src={photos.interior2 || "/interior-2.jpg"}
                   alt="Khuraak Restaurant Detail"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -402,6 +390,8 @@ export default function Home() {
                 <img
                   src={photos.interior2 || "/interior-2.jpg"}
                   alt="Khuraak Main Hall"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -417,6 +407,8 @@ export default function Home() {
                 <img
                   src={photos.interior3 || "/interior-3.jpg"}
                   alt="Khuraak Ambiance"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -432,6 +424,8 @@ export default function Home() {
                 <img
                   src={photos.interior4 || "/interior-4.jpg"}
                   alt="Khuraak Private Dining"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -475,13 +469,12 @@ export default function Home() {
           background: 'linear-gradient(135deg, #1c0608 0%, #300a0e 40%, #150507 100%)',
         }}
       >
+        {/* Single soft radial glow — no dot pattern */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-primary/20 rounded-full blur-[160px]" />
+        </div>
 
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, #fff 1.2px, transparent 0)`,
-            backgroundSize: '36px 36px',
-          }} /><div className="relative container-max text-center">
+        <div className="relative container-max text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-px bg-amber-400" />
             <span className="text-amber-300 font-sans text-xs font-semibold tracking-[0.25em] uppercase">
@@ -491,7 +484,7 @@ export default function Home() {
           </div>
 
           <h2 className="font-serif text-3xl sm:text-5xl font-bold text-white mb-5 leading-tight">
-            Celebrate In Royal Grandeur
+            Celebrate In Khuraak
           </h2>
           <p className="text-white/80 font-sans text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
             From intimate birthday celebrations and romantic anniversaries to corporate dinners and kitty parties — our restaurant provides customized decor, signature menus, and dedicated service.
@@ -598,9 +591,6 @@ export default function Home() {
                 >
                   Get Directions <FaArrowRight size={12} />
                 </a>
-                <Link to="/reservations" className="btn-outline">
-                  Book a Table
-                </Link>
               </div>
             </div>
 

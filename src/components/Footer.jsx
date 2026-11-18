@@ -99,12 +99,12 @@ export default function Footer() {
             <li className="flex items-start gap-2.5">
               <FaMapMarkerAlt className="mt-0.5 text-primary shrink-0" size={14} />
               <a
-                href="https://maps.app.goo.gl/pgfDJ3Cu5EoyTMLx5"
+                href="https://maps.app.goo.gl/koJn5DA37cSHefUF9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors leading-relaxed"
               >
-                Near, bharthana chauraha, Ashok Nagar,<br/>Yashoda Nagar, Etawah, UP 206001
+                Near, bharthana chauraha, Ashok Nagar,<br/>Etawah, UP 206001
               </a>
             </li>
             <li className="flex items-center gap-2.5">
@@ -113,7 +113,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2.5">
               <FaEnvelope className="text-primary shrink-0" size={13} />
-              <a href="mailto:Khuraaketawah@gmail.com" className="hover:text-primary transition-colors">Khuraaketawah@gmail.com</a>
+              <a href="https://mail.google.com/mail/?view=cm&to=Khuraaketawah@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Khuraaketawah@gmail.com</a>
             </li>
           </ul>
         </div>
@@ -121,9 +121,8 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="container-max py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-sans text-white/40">
+        <div className="container-max py-5 text-center text-xs font-sans text-white/40">
           <span>© {year} Khuraak Multi Cuisine Restaurant. All rights reserved.</span>
-          <span>Designed with ❤️ for fine dining</span>
         </div>
       </div>
     </footer>
