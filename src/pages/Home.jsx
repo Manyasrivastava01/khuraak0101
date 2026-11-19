@@ -283,11 +283,12 @@ export default function Home() {
             {/* Visual: Photography Showcase */}
             <div className="relative">
               {/* Primary framed restaurant photo */}
-              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-offwhite aspect-[4/3] relative">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-charcoal/10 aspect-[4/3] relative">
                 <img
                   src={photos.interior1 || "/interior-1.jpg"}
                   alt="Khuraak Grand Dining Hall"
-                  loading="lazy"
+                  loading="eager"
+                  fetchpriority="high"
                   decoding="async"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
