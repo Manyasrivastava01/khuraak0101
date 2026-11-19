@@ -18,13 +18,13 @@ export default function Footer() {
   return (
     <footer className="bg-charcoal text-white">
       {/* Top CTA strip */}
-      <div className="bg-primary py-10">
-        <div className="container-max flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div className="bg-primary py-5 sm:py-10">
+        <div className="container-max flex flex-col sm:flex-row items-center justify-between gap-3.5 sm:gap-6 text-center sm:text-left">
           <div>
-            <h3 className="font-serif text-2xl text-white font-bold">Ready for a fine dining experience?</h3>
-            <p className="text-white/80 text-sm mt-1 font-sans">Reserve your table today — we'll confirm within 12 hours.</p>
+            <h3 className="font-serif text-lg sm:text-2xl text-white font-bold leading-snug">Ready for a fine dining experience?</h3>
+            <p className="text-white/80 text-xs sm:text-sm mt-0.5 sm:mt-1 font-sans">Reserve your table today — we'll confirm within 12 hours.</p>
           </div>
-          <Link to="/reservations" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-primary whitespace-nowrap">
+          <Link to="/reservations" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-primary whitespace-nowrap !py-2 sm:!py-3 !px-5 sm:!px-6 !text-xs sm:!text-sm">
             Book a Table
           </Link>
         </div>

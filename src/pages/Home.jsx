@@ -200,21 +200,21 @@ export default function Home() {
             With 120 luxurious seats and handcrafted culinary recipes, we transform every meal into a celebration.
           </p>
 
-          {/* CTA Buttons — Reserve + Explore Menu only */}
-          <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 justify-center items-center mb-10 sm:mb-12 w-full max-w-md sm:max-w-none mx-auto">
+          {/* CTA Buttons — Reserve + Explore Menu on same line */}
+          <div className="flex flex-row gap-2.5 sm:gap-4 justify-center items-center mb-10 sm:mb-12 w-full max-w-md sm:max-w-none mx-auto px-1 sm:px-0">
             <Link
               to="/reservations"
               id="hero-reserve-btn"
-              className="btn-primary w-full sm:w-auto !px-8 sm:!px-9 !py-3.5 sm:!py-4 !text-sm sm:!text-base shadow-[0_8px_30px_rgba(215,20,26,0.45)] hover:shadow-[0_10px_35px_rgba(215,20,26,0.6)]"
+              className="btn-primary flex-1 sm:flex-initial !px-3.5 sm:!px-9 !py-3 sm:!py-4 text-xs sm:text-base whitespace-nowrap shadow-[0_8px_30px_rgba(215,20,26,0.45)] hover:shadow-[0_10px_35px_rgba(215,20,26,0.6)]"
             >
-              <MdRestaurant size={18} /> Reserve a Table
+              <MdRestaurant size={16} className="shrink-0" /> Reserve a Table
             </Link>
             <Link
               to="/menu"
               id="hero-menu-btn"
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 sm:px-9 py-3.5 sm:py-4 rounded-full border border-white/30 text-white font-sans font-semibold text-sm sm:text-base bg-white/5 hover:bg-white hover:text-charcoal transition-all duration-200 backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-1.5 sm:gap-2 flex-1 sm:flex-initial px-3.5 sm:px-9 py-3 sm:py-4 rounded-full border border-white/30 text-white font-sans font-semibold text-xs sm:text-base bg-white/5 hover:bg-white hover:text-charcoal transition-all duration-200 backdrop-blur-sm whitespace-nowrap"
             >
-              <MdMenuBook size={18} /> Explore Menu
+              <MdMenuBook size={16} className="shrink-0" /> Explore Menu
             </Link>
           </div>
 
