@@ -85,7 +85,7 @@ export default function About() {
                     alt="Khuraak"
                     className="h-12 w-auto mx-auto object-contain mb-2 drop-shadow"
                   />
-                  <p className="font-serif text-base italic text-white/90">Pure Vegetarian Fine Dining</p>
+                  <p className="font-serif text-base italic text-white/90">Multi Cuisine Restaurant</p>
                   <p className="text-white/60 font-sans text-xs mt-1">120 Grand Seats • Etawah</p>
                 </div>
               </div>

@@ -1,0 +1,15 @@
+# Caching rules for high performance across all devices and aspect ratios
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=2592000
+
+/*.png
+  Cache-Control: public, max-age=2592000
+
+/*.svg
+  Cache-Control: public, max-age=2592000
+
+/*
+  Cache-Control: public, max-age=0, must-revalidate

@@ -144,7 +144,7 @@ export default function Home() {
         <title>Khuraak Multi Cuisine Restaurant — Fine Dining in Etawah</title>
         <meta
           name="description"
-          content="Khuraak Multi Cuisine Restaurant — Etawah's premier pure vegetarian fine dining experience. 120 grand seats, authentic multi-cuisine delicacies, and royal Indian hospitality."
+          content="Khuraak Multi Cuisine Restaurant — Etawah's premier multi cuisine dining experience. 120 grand seats, authentic multi-cuisine delicacies, and royal Indian hospitality."
         />
       </Helmet>
 
@@ -167,6 +167,8 @@ export default function Home() {
             <img
               src={photos.heroLogo || "/khuraak-logo.png"}
               alt="Khuraak Multi Cuisine Restaurant"
+              width="200"
+              height="108"
               className="h-20 sm:h-24 md:h-28 w-auto mx-auto object-contain drop-shadow-[0_12px_32px_rgba(215,20,26,0.4)]"
               fetchpriority="high"
               decoding="async"
