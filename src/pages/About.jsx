@@ -159,26 +159,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="section bg-primary">
-        <div className="container-max text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-            Come, Experience Khuraak
-          </h2>
-          <p className="text-white/80 font-sans mb-8 max-w-lg mx-auto">
-            Reserve your table today and let us show you what fine dining truly means.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/reservations" className="bg-white text-primary font-sans font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors inline-flex items-center gap-2">
-              Book a Table <FaArrowRight size={13} />
-            </Link>
-            <Link to="/contact" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-primary">
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   )
 }

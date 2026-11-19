@@ -167,8 +167,6 @@ export default function Home() {
             <img
               src={photos.heroLogo || "/khuraak-logo.png"}
               alt="Khuraak Multi Cuisine Restaurant"
-              width="200"
-              height="108"
               className="h-20 sm:h-24 md:h-28 w-auto mx-auto object-contain drop-shadow-[0_12px_32px_rgba(215,20,26,0.4)]"
               fetchpriority="high"
               decoding="async"
