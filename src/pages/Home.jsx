@@ -183,9 +183,9 @@ export default function Home() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-5 leading-[1.14] tracking-tight">
+          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-3 sm:mb-4 leading-snug sm:leading-tight tracking-normal max-w-3xl mx-auto">
             Where Every Meal Becomes <br />
-            <span className="bg-gradient-to-r from-red-400 via-rose-200 to-amber-200 bg-clip-text text-transparent italic">
+            <span className="bg-gradient-to-r from-red-400 via-rose-200 to-amber-200 bg-clip-text text-transparent italic font-normal">
               a Celebration
             </span>
           </h1>
@@ -195,7 +195,7 @@ export default function Home() {
           </div>
 
           {/* Refined Formal Description */}
-          <p className="text-white/75 font-sans text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal">
+          <p className="text-white/75 font-sans text-xs sm:text-sm md:text-base max-w-xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal">
             Welcome to Khuraak, where authentic multi-cuisine artistry meets regal ambiance.
             With 120 luxurious seats and handcrafted culinary recipes, we transform every meal into a celebration.
           </p>
