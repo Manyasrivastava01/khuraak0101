@@ -99,7 +99,7 @@ export default function Footer() {
             <li className="flex items-start gap-2.5">
               <FaMapMarkerAlt className="mt-0.5 text-primary shrink-0" size={14} />
               <a
-                href="https://maps.app.goo.gl/koJn5DA37cSHefUF9"
+                href="https://maps.app.goo.gl/KRBYAgUNq4sURgmp9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors leading-relaxed"

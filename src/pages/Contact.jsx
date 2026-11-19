@@ -6,7 +6,7 @@ const HOURS = [
 ]
 
 // Real Google Maps short link provided by restaurant owner
-const MAPS_LINK = 'https://maps.app.goo.gl/koJn5DA37cSHefUF9'
+const MAPS_LINK = 'https://maps.app.goo.gl/KRBYAgUNq4sURgmp9'
 // Gmail compose link so it opens Gmail instead of Outlook
 const GMAIL_LINK = 'https://mail.google.com/mail/?view=cm&to=Khuraaketawah@gmail.com'
 
@@ -150,7 +150,7 @@ export default function Contact() {
               <h2 className="font-serif text-xl font-bold text-charcoal">Find Us on Map</h2>
               <div className="rounded-xl overflow-hidden border border-border" style={{ minHeight: '340px', height: '360px' }}>
                 <iframe
-                  src="https://maps.google.com/maps?q=Khuraak+Multi+Cuisine+Restaurant,+Ashok+Nagar,+Etawah,+UP+206001&output=embed&z=16"
+                  src="https://maps.google.com/maps?q=26.7882172,79.0323821+(Khuraak+Multi+Cuisine+Restaurant)&t=&z=17&ie=UTF8&iwloc=B&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -177,7 +177,7 @@ export default function Home() {
           <div className="flex items-center justify-center gap-3 mb-5">
             <span className="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-amber-400" />
             <span className="text-amber-300/90 font-sans text-xs font-semibold tracking-[0.3em] uppercase">
-              Multi Cuisine Restaurant • Etawah
+              Multi Cuisine Restaurant
             </span>
             <span className="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-amber-400" />
           </div>
@@ -549,7 +549,7 @@ export default function Home() {
                   <div>
                     <p className="text-xs text-gray-400 font-sans uppercase tracking-wider">Address</p>
                     <p className="font-sans font-medium text-charcoal text-sm leading-relaxed mt-0.5">
-                      Near, bharthana chauraha, Ashok Nagar, Yashoda Nagar, Etawah, Uttar Pradesh 206001
+                      Near, bharthana chauraha, Ashok Nagar, Etawah, UP 206001
                     </p>
                   </div>
                 </div>
@@ -584,7 +584,7 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://maps.app.goo.gl/pgfDJ3Cu5EoyTMLx5"
+                  href="https://maps.app.goo.gl/KRBYAgUNq4sURgmp9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"
@@ -597,7 +597,7 @@ export default function Home() {
             {/* Google Maps Embed */}
             <div className="rounded-3xl overflow-hidden shadow-xl aspect-square sm:aspect-video lg:aspect-[4/3] bg-offwhite flex items-center justify-center border border-border">
               <iframe
-                src="https://maps.google.com/maps?q=Near,+bharthana+chauraha,+Ashok+Nagar,+Yashoda+Nagar,+Etawah,+Uttar+Pradesh+206001&output=embed&z=16"
+                src="https://maps.google.com/maps?q=26.7882172,79.0323821+(Khuraak+Multi+Cuisine+Restaurant)&t=&z=17&ie=UTF8&iwloc=B&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
