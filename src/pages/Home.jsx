@@ -183,10 +183,9 @@ export default function Home() {
             <span className="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-rose-300/70" />
           </div>
 
-          {/* Headline */}
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-5 leading-tight tracking-tight max-w-4xl mx-auto">
+          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-3 sm:mb-4 leading-snug sm:leading-tight max-w-3xl mx-auto">
             Where Every Meal Becomes <br />
-            <span className="bg-gradient-to-r from-rose-200 via-amber-100 to-rose-300 bg-clip-text text-transparent italic font-normal">
+            <span className="bg-gradient-to-r from-red-400 via-rose-200 to-amber-200 bg-clip-text text-transparent italic font-normal">
               a Celebration
             </span>
           </h1>
