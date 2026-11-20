@@ -148,21 +148,22 @@ export default function Home() {
         />
       </Helmet>
 
-      {/* ── Hero Section ── */}
+      {/* ── Hero Section (Option 3: Regal Deep Wine & Velvet Crimson) ── */}
       <section
         id="hero"
         className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-28 pb-20"
         style={{
-          background: 'radial-gradient(ellipse at top, #26090c 0%, #170709 45%, #0d0405 100%)',
+          background: 'radial-gradient(ellipse at top, #200407 0%, #140204 55%, #0A0102 100%)',
         }}
       >
-        {/* Single soft red radial glow — no dot pattern */}
+        {/* Soft velvety ruby glow & rose-candlelight aura */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/25 rounded-full blur-[160px]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[750px] h-[480px] bg-red-700/18 rounded-full blur-[150px]" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[350px] bg-rose-400/10 rounded-full blur-[130px]" />
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto animate-fade-in">
-          {/* Logo Showcase (Replacing the circular 'ख' design) */}
+          {/* Logo Showcase */}
           <div className="mb-6 inline-block">
             <img
               src={photos.heroLogo || "/khuraak-logo.png"}
@@ -175,27 +176,23 @@ export default function Home() {
 
           {/* Formal Eyebrow Ribbon */}
           <div className="flex items-center justify-center gap-3 mb-5">
-            <span className="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-amber-400" />
-            <span className="text-amber-300/90 font-sans text-xs font-semibold tracking-[0.3em] uppercase">
+            <span className="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-rose-300/70" />
+            <span className="text-rose-200 font-sans text-xs font-semibold tracking-[0.28em] uppercase">
               Multi Cuisine Restaurant
             </span>
-            <span className="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-amber-400" />
+            <span className="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-rose-300/70" />
           </div>
 
           {/* Headline */}
-          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-3 sm:mb-4 leading-snug sm:leading-tight tracking-normal max-w-3xl mx-auto">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-5 leading-tight tracking-tight max-w-4xl mx-auto">
             Where Every Meal Becomes <br />
-            <span className="bg-gradient-to-r from-red-400 via-rose-200 to-amber-200 bg-clip-text text-transparent italic font-normal">
+            <span className="bg-gradient-to-r from-rose-200 via-amber-100 to-rose-300 bg-clip-text text-transparent italic font-normal">
               a Celebration
             </span>
           </h1>
 
-          <div className="ornament my-4 sm:my-6">
-            <span className="ornament-dot bg-amber-400/80" />
-          </div>
-
           {/* Refined Formal Description */}
-          <p className="text-white/75 font-sans text-xs sm:text-sm md:text-base max-w-xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal">
+          <p className="text-white/85 font-sans text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal">
             Welcome to Khuraak, where authentic multi-cuisine artistry meets regal ambiance.
             With 120 luxurious seats and handcrafted culinary recipes, we transform every meal into a celebration.
           </p>
@@ -212,22 +209,22 @@ export default function Home() {
             <Link
               to="/menu"
               id="hero-menu-btn"
-              className="inline-flex items-center justify-center gap-1.5 sm:gap-2 flex-1 sm:flex-initial px-3.5 sm:px-9 py-3 sm:py-4 rounded-full border border-white/30 text-white font-sans font-semibold text-xs sm:text-base bg-white/5 hover:bg-white hover:text-charcoal transition-all duration-200 backdrop-blur-sm whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-1.5 sm:gap-2 flex-1 sm:flex-initial px-3.5 sm:px-9 py-3 sm:py-4 rounded-full border border-white/25 text-white font-sans font-semibold text-xs sm:text-base bg-white/5 hover:bg-white hover:text-charcoal transition-all duration-200 backdrop-blur-sm whitespace-nowrap shadow-sm"
             >
               <MdMenuBook size={16} className="shrink-0" /> Explore Menu
             </Link>
           </div>
 
           {/* Glassmorphism Luxury Quick Strip */}
-          <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-3.5 sm:p-5 shadow-2xl">
-            <div className="flex flex-wrap items-center justify-center gap-3.5 sm:gap-6 lg:gap-8 text-white/75 text-xs sm:text-sm font-sans">
+          <div className="bg-black/35 backdrop-blur-md border border-white/10 rounded-2xl p-3.5 sm:p-5 shadow-2xl">
+            <div className="flex flex-wrap items-center justify-center gap-3.5 sm:gap-6 lg:gap-8 text-white/85 text-xs sm:text-sm font-sans">
               <span className="flex items-center gap-1.5 sm:gap-2">
-                <FaClock size={13} className="text-amber-400 shrink-0" />
+                <FaClock size={13} className="text-rose-300 shrink-0" />
                 <span>11:00 AM – 11:30 PM (All Days)</span>
               </span>
               <span className="hidden md:inline w-px h-4 bg-white/20" />
               <span className="flex items-center gap-1.5 sm:gap-2">
-                <FaMapMarkerAlt size={13} className="text-amber-400 shrink-0" />
+                <FaMapMarkerAlt size={13} className="text-rose-300 shrink-0" />
                 <span>Near Bharthana Chauraha, Etawah</span>
               </span>
               <span className="hidden md:inline w-px h-4 bg-white/20" />
@@ -235,12 +232,12 @@ export default function Home() {
                 href="tel:+919105104000"
                 className="flex items-center gap-1.5 sm:gap-2 hover:text-white transition-colors"
               >
-                <FaPhone size={12} className="text-amber-400 shrink-0" />
+                <FaPhone size={12} className="text-rose-300 shrink-0" />
                 <span>+91 91051 04000</span>
               </a>
               <span className="hidden md:inline w-px h-4 bg-white/20" />
-              <span className="flex items-center gap-1 text-green-400 font-medium">
-                <FaLeaf size={12} className="shrink-0" />
+              <span className="inline-flex items-center gap-1 text-emerald-300 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full text-xs font-medium">
+                <FaLeaf size={11} className="shrink-0 text-emerald-400" />
                 <span>100% Pure Veg</span>
               </span>
             </div>
@@ -465,14 +462,14 @@ export default function Home() {
 
       {/* ── Celebrations & Private Dinners ── */}
       <section
-        className="relative py-24 overflow-hidden"
+        className="relative py-20 sm:py-24 overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #1c0608 0%, #300a0e 40%, #150507 100%)',
+          background: 'linear-gradient(135deg, #131417 0%, #1A1C21 50%, #0F1012 100%)',
         }}
       >
-        {/* Single soft radial glow — no dot pattern */}
+        {/* Soft subtle ambient glow */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-primary/20 rounded-full blur-[160px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-red-600/10 rounded-full blur-[160px]" />
         </div>
 
         <div className="relative container-max text-center">
